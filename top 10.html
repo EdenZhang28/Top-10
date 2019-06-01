@@ -1,0 +1,22 @@
+<html>
+    <canvas id="mycanvas" width="800"></canvas>
+	<script src="countries.js"></script>
+	<script>
+	    var c = document.getElementById('mycanvas');
+	    var ctx = c.getContext('2d');
+	
+	    data.sort(function(a,b) {
+			return a.population - b.population;
+	    })
+		data.reverse();
+		
+		ctx.fillStyle = "red";
+		ctx.fillRect(0,0,data[0].population/1000000,50);
+		ctx.fillstyle = "white";
+		ctx.font = "30px Arial";
+		ctx.fillText(data[0].country,10,35);
+	
+	
+	
+	</script>
+</html>
